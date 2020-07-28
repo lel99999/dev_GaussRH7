@@ -1,3 +1,4 @@
 ---
-gauss_bin_directory: /usr/local/gauss15
+#gauss_bin_directory: /usr/local/gauss15
+gauss_bin_directory: /usr/local/gauss20
 guass_local_bin_directory: /artifacts

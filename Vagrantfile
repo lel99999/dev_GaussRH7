@@ -44,7 +44,6 @@ require 'yaml'
 #      override.ssh.private_key_path = aws_config.fetch("private_key_path")
 #    end
 #    config.vm.provision "ansible" do |ansible|
-##     ansible.playbook = "deploy_ancillaryRH7.yml"
 ##     ansible.playbook = "deploy_eodrole.yml"
 #      ansible.playbook = "deploy_gaussRH7.yml"
 ##     ansible.groups = {
@@ -69,12 +68,12 @@ Vagrant.configure("2") do |config|
 #   trigger.info = "Trigger Execution ..."
 #   trigger.run = { path:"subscription-manager register --username <username> --password <password> --auto-attach"}
 # end
-  config.vm.define "gaussRH7" do |sasRH7|
+  config.vm.define "gaussRH7" do |gaussRH7|
     gaussRH7.vm.box = "clouddood/RH7.5_baserepo"
     gaussRH7.vm.hostname = "sasRH7"
     gaussRH7.vm.network "private_network", ip: "192.168.60.157"
 #   gaussRH7.vm.network "private_network", ip: "192.168.60.157", nic_type: "virtio"
-    gaussRH7.vm.provision "shell", :inline => "sudo echo '192.168.60.157 stataRH7.local sasRH7' >> /etc/hosts"
+    gaussRH7.vm.provision "shell", :inline => "sudo echo '192.168.60.157 gaussRH7.local gaussRH7' >> /etc/hosts"
 
 ##  Use Main / Update in Vagrant provision command ### $vagrant provision --provision-with shell/main/update
 
@@ -82,7 +81,7 @@ Vagrant.configure("2") do |config|
     gaussRH7.vm.provision "main", type: "ansible" do |ansible|
       ansible.playbook = "deploy_gaussRH7_DEV.local.yml"
 #     ansible.playbook = "deploy_gaussRH7_DEV.local.yml"
-#     ansible.playbook = "deploy_sasTestRH7.yml"
+#     ansible.playbook = "deploy_gaussTestRH7.yml"
       ansible.inventory_path = "vagrant_hosts"
       #ansible.tags = ansible_tags
       #ansible.verbose = ansible_verbosity

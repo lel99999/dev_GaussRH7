@@ -27,7 +27,8 @@
 #   scl enable python27 -- pip install gdown
 
 - name: use gdown to download tar file
-  shell: /usr/local/bin/gdown https://drive.google.com/uc?id=1yB-zBR55s_9eOfOVgfU6doXYk_YP_FAw -O /tmp/Stata16Linux64.tar.gz
+  shell: /usr/local/bin/gdown https://drive.google.com/uc?id=1cWMBpd62_-NugCBnJdGjLL6WVy1KRwly -O /tmp/GAUSS_20_Linux_64.tar.gz
+#  https://drive.google.com/file/d/1cWMBpd62_-NugCBnJdGjLL6WVy1KRwly/view?usp=sharing
 # shell: gdown https://drive.google.com/uc?id=1qaZH9_SrGyjHjWT3P2WtvZAhEkP9YG1Z -O /tmp/ancilRH7_repo.tar.gz
 #     when: stage == "DEV_LOCAL"
 #       stage values = { "DEV_LOCAL","DEV", "PROD" }

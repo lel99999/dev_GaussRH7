@@ -37,8 +37,7 @@
 #     shell:  yum groupinstall "Development Tools" -y
 
   roles:
-    - stattransfer14
-#   - chromeRH7
+    - chromeRH7
 #   - emacsRH7
 #   - epel7
 #   - python2RH7

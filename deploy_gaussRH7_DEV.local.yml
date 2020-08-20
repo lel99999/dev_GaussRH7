@@ -2,19 +2,19 @@
   vars:
     custom_repo: true
     deploy_iptables: true
-#   envir: PROD
-    envir: DEV.local
-  vars_files:
-     - ~/RHACCOUNT
+    envir: PROD
+#    envir: DEV.local
+# vars_files:
+#    - ~/RHACCOUNT
   become: yes
   become_method: sudo
 
   pre_tasks:
-    - debug:
+#   - debug:
 #       msg: "Variables: _uid = {{ _uid }}, _pwd = **********"
-        msg: "Variables: _uid = {{ _uid }}, _pwd = {{ _pwd }}"
-    - name: register RHEL7.5
-      command: "/usr/bin/subscription-manager register --username {{ _uid }} --password {{ _pwd }} --auto-attach --force"
+#       msg: "Variables: _uid = {{ _uid }}, _pwd = {{ _pwd }}"
+#   - name: register RHEL7.5
+#     command: "/usr/bin/subscription-manager register --username {{ _uid }} --password {{ _pwd }} --auto-attach --force"
 #     when: _uid != "" and _pwd != ""
 #     command: "/usr/bin/subscription-manager register --username <name> --password <password> --auto-attach"
     - name: register RHEL7 repos necessary for Chrome (optional, extras)
@@ -35,21 +35,10 @@
 #       name: "@Development Tools"
 #       state: present
 #     shell:  yum groupinstall "Development Tools" -y
-#   - name: Install X Windows
-#     yum:
-#       name: "@X Window System"
-#       state: present 
-#   - name: Install wget
-#     yum:
-#       name: wget
-#       state: present
-#   - name: Install Latest EPEL
-#     shell:  wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -O /tmp/epel-release-latest-7.noarch.rpm
-#   - name: Install epel
-#     shell:  yum -y localinstall /tmp/epel*rpm
 
   roles:
-    - emacsRH7
+    - chromeRH7
+#   - emacsRH7
 #   - epel7
 #   - python2RH7
 #   - python3RH7

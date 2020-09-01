@@ -44,7 +44,9 @@
 
 - name: copy the expect script
   template:
-    src: install_gauss.exp
+    src: install_gauss20.exp
+#   src: install_gauss.exp
+#   dest: "{{gauss_bin_directory}}/install_gauss.exp"
     dest: "{{gauss_bin_directory}}/install_gauss.exp"
     mode: a+rx
 

@@ -37,7 +37,7 @@
 
 - name: Untar the tarball
   unarchive:
-    src: "{{guass_local_bin_directory}}/GAUSS_20_Linux_RHEL_64.tar.gz"
+    src: "{{guass_local_bin_directory}}/GAUSS_20_Linux_64.tar.gz"
 #   src: "{{guass_local_bin_directory}}/GAUSS_15_Linux_RHEL_64.tar.gz"
     dest: "{{gauss_bin_directory}}/"
   when: custom_repo

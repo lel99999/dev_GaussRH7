@@ -70,10 +70,10 @@ Vagrant.configure("2") do |config|
 # end
   config.vm.define "gaussRH7" do |gaussRH7|
     gaussRH7.vm.box = "clouddood/RH7.5_baserepo"
-    gaussRH7.vm.hostname = "sasRH7"
-    gaussRH7.vm.network "private_network", ip: "192.168.60.157"
+    gaussRH7.vm.hostname = "gaussRH7"
+    gaussRH7.vm.network "private_network", ip: "192.168.60.177"
 #   gaussRH7.vm.network "private_network", ip: "192.168.60.157", nic_type: "virtio"
-    gaussRH7.vm.provision "shell", :inline => "sudo echo '192.168.60.157 gaussRH7.local gaussRH7' >> /etc/hosts"
+    gaussRH7.vm.provision "shell", :inline => "sudo echo '192.168.60.177 gaussRH7.local gaussRH7' >> /etc/hosts"
 
 ##  Use Main / Update in Vagrant provision command ### $vagrant provision --provision-with shell/main/update
 

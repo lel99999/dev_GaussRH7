@@ -33,7 +33,11 @@
 #     when: stage == "DEV_LOCAL"
 #       stage values = { "DEV_LOCAL","DEV", "PROD" }
 
-
+- name: Add XWindows for Server
+  yum:
+    name: "@Server with GUI"
+    state: present
+  when: custom_repo
 
 - name: Untar the tarball
   unarchive:

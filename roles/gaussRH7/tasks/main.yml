@@ -51,11 +51,11 @@
     src: install_gauss20.exp
 #   src: install_gauss.exp
 #   dest: "{{gauss_bin_directory}}/install_gauss.exp"
-    dest: "{{gauss_bin_directory}}/install_gauss.exp"
+    dest: "{{gauss_bin_directory}}/install_gauss20.exp"
     mode: a+rx
 
 - name: Run gauss expect script
-  shell: "./install_gauss.exp"
+  shell: "./install_gauss20.exp"
   args:
     chdir: "{{gauss_bin_directory}}"
   when: custom_repo

@@ -2,7 +2,11 @@
 Gauss update for RHEL 7.x from v15 to v20
 
 #### Add for XWindows 
+Use:
 $yum groupinstall "Server with GUI"<br/>
+
+Instead of:
+$yum groupinstall "X Window System"<br/>
 
 #### Add Library Path
 Testing for verification:<br/>

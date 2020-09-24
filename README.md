@@ -16,3 +16,12 @@ Testing for verification:<br/>
 2:<br/>
 Under library tool -> Under Paths -> Right-Mouse-Button -> Add Files <br/>
 
+##### Library Source & Example
+1) Download carrionlib.zip from https://github.com/aptech/gauss-carrion-library/releases
+2) Select Tools -> Install Applications from main Gauss Menu
+3) Follow installer prompt
+4) Before using functions created by carrionlib, need to load the newly created carrionlib library:
+  4a) Navigate to Library Tool Windows and click on small wrench located next to the carrionlib library. Select load library
+  4b) Enter library carrionlib in Porgram Input/Output Window
+  4c) Put the line library carrionlib; at the beginning of your program files
+

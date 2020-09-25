@@ -37,7 +37,8 @@
 #     shell:  yum groupinstall "Development Tools" -y
     - name: Install X Windows
       yum:
-        name: "@X Window System"
+        name: "@Server with GUI"
+#       name: "@X Window System"
         state: present
     - name: Install wget
       yum:
@@ -62,8 +63,9 @@
 #   - python2RH7
 #   - python3RH7
 #   - devtools7
-#   - odbc7
-#   - postgresql-client7
+    - odbc7
+    - postgresql-client7
+    - r_RH7
 #   - sasRH7
 #   - stattransfer14
 

@@ -26,7 +26,7 @@ Under library tool -> Under Paths -> Right-Mouse-Button -> Add Files <br/>
   4b) Enter library carrionlib in Porgram Input/Output Window
   4c) Put the line library carrionlib; at the beginning of your program files
 
-##### Add Library Path to /home/<org>/<username>/gauss20/gauss.cfg
+##### Add Library Path to `/home/<org>/<username>/gauss20/gauss.cfg`
 `extra_lib_path = /<path_lo_libraries>/`<br/>
 
 Right-mouse-button click on Library Tool to load library<br/>

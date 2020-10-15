@@ -49,7 +49,7 @@
     - postgresql-client7
     - r_RH7
 #   - sasRH7
-#   - stattransfer14
+    - stattransfer14
 
   post_tasks:
 #   - name: register mime types

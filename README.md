@@ -3,10 +3,17 @@ Gauss update for RHEL 7.x from v15 to v20
 
 #### Add for XWindows 
 Use:
-$yum groupinstall "Server with GUI"<br/>
+`$yum groupinstall "Server with GUI"`<br/>
 
 Instead of:
-$yum groupinstall "X Window System"<br/>
+`$yum groupinstall "X Window System"`<br/>
+
+Add EPEL:
+`$sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`<br/>
+
+Install XFCE4:
+`$sudo yum groupinstall "Xfce"`<br/>
+
 
 #### Add Library Path
 Testing for verification:<br/>

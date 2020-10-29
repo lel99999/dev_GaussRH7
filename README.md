@@ -14,6 +14,8 @@ Add EPEL:
 Install XFCE4:
 `$sudo yum groupinstall "Xfce"`<br/>
 
+Check Available Display Managers:
+`$cd /usr/share/xsessions`<br/>
 
 #### Add Library Path
 Testing for verification:<br/>

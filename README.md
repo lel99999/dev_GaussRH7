@@ -22,16 +22,15 @@ Testing for verification:<br/>
 1:<br/>
 `lib <path_to_lib> -addpath`<br/>
 
-FIX:
-`$sudo yum install mesa-libGLU*`<br/>
-
 2:<br/>
 Under library tool -> Under Paths -> Right-Mouse-Button -> Add Files <br/>
 
 #### Error - error while loading shared libraries: libGLU.so1: no such file or directory
 `$sud yum list install *libGLU*`<br/>
 
-
+FIX:
+`$sudo yum install mesa-libGLU*`<br/>
+![libGLU](libGLU_packages.png)
 
 ##### Library Source & Example
 1) Download carrionlib.zip from https://github.com/aptech/gauss-carrion-library/releases

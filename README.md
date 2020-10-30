@@ -25,6 +25,11 @@ Testing for verification:<br/>
 2:<br/>
 Under library tool -> Under Paths -> Right-Mouse-Button -> Add Files <br/>
 
+#### Error - Qt: XKEYBOARD extension not present on the X Server
+FIX:
+Add file (i.e. xkeyboard.sh to /etc/profile.d) with following line:<br/>
+`export XKB_DEFAULT_RULES=base`<br/>
+
 #### Error - error while loading shared libraries: libGLU.so1: no such file or directory
 `$sud yum list install *libGLU*`<br/>
 

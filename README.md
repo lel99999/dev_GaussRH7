@@ -9,10 +9,10 @@ Instead of:
 `$yum groupinstall "X Window System"`<br/>
 
 Add EPEL:
-`$sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`<br/>
+`$sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`<br/>
 
 Install XFCE4:
-`$sudo yum groupinstall "Xfce"`<br/>
+`$sudo yum groupinstall -y "Xfce"`<br/>
 
 Check Available Display Managers:
 `$cd /usr/share/xsessions`<br/>

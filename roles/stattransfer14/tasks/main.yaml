@@ -43,7 +43,13 @@
     - stattransfer
 
 - name: Change owner  permissions
-  shell: chown -R root:root {{stattransfer_local_bin_directory}}/stlinux64_install
+# shell: chown -R root:root {{stattransfer_local_bin_directory}}/stlinux64_install
+  file:
+    dest: {{stattransfer_local_bin_directory}}/stlinux64_install
+    owner: root
+    group: root
+#   mode: mode=u=rwX,g=rX,o=rX
+    recurse: yes
 
 - name: Change folder/file permissions
   shell: chmod +x {{stattransfer_local_bin_directory}}/stlinux64_install

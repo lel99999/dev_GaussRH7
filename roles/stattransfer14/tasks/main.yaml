@@ -26,7 +26,7 @@
   shell: pip3 install gdown
 
 - name: use gdown to download tar file
-  shell: /usr/local/bin/gdown https://drive.google.com/file/d/1Wc07fwcuC2iqb7fbaM-Na0LmXSjxyTC1/view?usp=sharing -O /tmp/stlinux64_install
+  shell: /usr/local/bin/gdown --id 1Wc07fwcuC2iqb7fbaM-Na0LmXSjxyTC1
 # shell: /usr/local/bin/gdown https://drive.google.com/uc?id=1yB-zBR55s_9eOfOVgfU6doXYk_YP_FAw -O /tmp/Stata16Linux64.tar.gz
 # https://drive.google.com/file/d/1Wc07fwcuC2iqb7fbaM-Na0LmXSjxyTC1/view?usp=sharing 
 # shell: gdown https://drive.google.com/uc?id=1qaZH9_SrGyjHjWT3P2WtvZAhEkP9YG1Z -O /tmp/ancilRH7_repo.tar.gz

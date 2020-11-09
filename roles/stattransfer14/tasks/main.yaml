@@ -51,8 +51,8 @@
 #   mode: u=rwX,g=rX,o=rX
 #   recurse: yes
 
- - name: Change folder/file permissions
-   shell: chmod +x {{stattransfer_local_bin_directory}}/stlinux64_install
+- name: Change folder/file permissions
+  shell: chmod +x {{stattransfer_local_bin_directory}}/stlinux64_install
 
 - name: Copy over the install bin
   copy:

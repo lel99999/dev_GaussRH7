@@ -14,8 +14,8 @@
 - debug:
     var: st_localbin_dir
 
-- name: Create Temp Local bin Dir
-  shell: ln -s /tmp /artifacts
+# name: Create Temp Local bin Dir
+# shell: ln -s /tmp /artifacts
 
 - name: Install python3 pip
   yum:
@@ -43,20 +43,20 @@
     - stattransfer
 
 - name: Change owner  permissions
-# shell: chown -R root:root {{stattransfer_local_bin_directory}}/stlinux64_install
-  file:
-    dest: {{stattransfer_local_bin_directory}}/stlinux64_install_a
-    owner: root
-    group: root
-    mode: u=rwX,g=rX,o=rX
-    recurse: yes
+  shell: chown -R root:root {{stattransfer_local_bin_directory}}/stlinux64_install
+# file:
+#   dest: {{stattransfer_local_bin_directory}}/stlinux64_install_a
+#   owner: root
+#   group: root
+#   mode: u=rwX,g=rX,o=rX
+#   recurse: yes
 
-#- name: Change folder/file permissions
-#  shell: chmod +x {{stattransfer_local_bin_directory}}/stlinux64_install
+ - name: Change folder/file permissions
+   shell: chmod +x {{stattransfer_local_bin_directory}}/stlinux64_install
 
 - name: Copy over the install bin
   copy:
-    src: "{{stattransfer_local_bin_directory}}/stlinux64_install_a"
+    src: "{{stattransfer_local_bin_directory}}/stlinux64_install"
     dest: "{{stattransfer_install_directory}}/stlinux64_install"
   when: custom_repo
   tags:

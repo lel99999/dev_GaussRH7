@@ -40,7 +40,7 @@
 #   - gaussRH7
 ##   - stataRH7
 ##   - devtools7
-    - r_RH7
+#   - r_RH7
     - stattransfer14
 #   - chromeRH7
 #   - emacsRH7

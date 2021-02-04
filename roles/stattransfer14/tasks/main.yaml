@@ -34,6 +34,9 @@
 #     when: stage == "DEV_LOCAL"
 #       stage values = { "DEV_LOCAL","DEV", "PROD" }
 
+- name: Rename download to expected 
+  shell: mv /usr/local/StatTransfer14/stlinux64_install_a /usr/local/StatTransfer14/stlinux64_install
+
 - name: Verify install directory
   file:
     path: "{{stattransfer_install_directory}}/"

@@ -90,21 +90,22 @@
   tags:
     - postgres_client
 
-- name: Add 94 yum repo
-  yum_repository:
-    name: postgres94
-    description: postgresql 94 repo for RHEL 7
-    baseurl: https://download.postgresql.org/pub/repos/yum/9.4/redhat/rhel-7-x86_64/
+## Repo/Packages for 9.4 Not Available anymore
+#- name: Add 94 yum repo
+#  yum_repository:
+#    name: postgres94
+#    description: postgresql 94 repo for RHEL 7
+#    baseurl: https://download.postgresql.org/pub/repos/yum/9.4/redhat/rhel-7-x86_64/
 
-- name: Install postgres packages
-  yum:
-    name: "{{ item }}"
-    state: present
-#   state: latest
-    disable_gpg_check: yes
-  with_items: "{{ postgres_packages }}"
-  tags:
-    - postgres_client
+#- name: Install postgres packages
+#  yum:
+#    name: "{{ item }}"
+#    state: present
+##   state: latest
+#    disable_gpg_check: yes
+#  with_items: "{{ postgres_packages }}"
+#  tags:
+#    - postgres_client
 
 - name: Install gis postgres packages
   yum:

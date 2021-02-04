@@ -156,10 +156,11 @@
   tags:
     - postgres_client
 
-- name: Create a symlink that can remain constant during upgrades
-  file:
-    src: "{{ postgres_install_dir }}"
-    dest: /usr/pgsql
-    state: link
-  tags:
-    - postgres_client
+# Error for /usr/pgsql-9.4
+#- name: Create a symlink that can remain constant during upgrades
+#  file:
+#    src: "{{ postgres_install_dir }}"
+#    dest: /usr/pgsql
+#    state: link
+#  tags:
+#    - postgres_client

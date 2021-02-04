@@ -123,14 +123,15 @@
     path: /usr/include/pgsql
   register: lpgsqlinclude
 
-- name: Ensure other libraries can see header files
-  file:
-    src: "{{ postgres_install_dir }}/include/"
-    dest: /usr/include/pgsql
-    state: link
-  tags:
-    - postgres_client
-  when: lpgsqlinclude.stat.exists == false
+# Error for /usr/pgsql-9.4/include
+#- name: Ensure other libraries can see header files
+#  file:
+#    src: "{{ postgres_install_dir }}/include/"
+#    dest: /usr/include/pgsql
+#    state: link
+#  tags:
+#    - postgres_client
+#  when: lpgsqlinclude.stat.exists == false
 
 - name: Check if lib link exists
   stat:

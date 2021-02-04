@@ -41,7 +41,7 @@
 ##   - stataRH7
 ##   - devtools7
 #   - r_RH7
-#   - stattransfer14
+    - stattransfer14
 #   - chromeRH7
 #   - emacsRH7
 #   - epel7

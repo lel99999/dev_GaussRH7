@@ -25,6 +25,7 @@
 - name: Install gdown for remote download
   shell: pip3 install gdown
 
+### Make sure to download to /usr/local/StatTransfer14
 - name: use gdown to download tar file
   shell: /usr/local/bin/gdown --id 1Wc07fwcuC2iqb7fbaM-Na0LmXSjxyTC1
 # shell: /usr/local/bin/gdown https://drive.google.com/uc?id=1yB-zBR55s_9eOfOVgfU6doXYk_YP_FAw -O /tmp/Stata16Linux64.tar.gz

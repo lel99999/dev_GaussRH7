@@ -62,6 +62,14 @@
     - postgresql10-docs
     - postgresql10-contrib
 
+- name: create symlink /usr/pgsql -> /usr/pgsql-10
+  file:
+    src: /usr/pgsql-10
+    dest: /usr/pgsql
+    state: link
+  tags:
+    - postgres_client
+
 - name: Install postgres repository
   yum:
     name: "{{ postgres_repository_url }}"
